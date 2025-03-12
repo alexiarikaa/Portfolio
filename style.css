@@ -1,0 +1,111 @@
+body {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #FFB6C1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Heading */
+h1 {
+  font-size: 3em;
+  color: #000000;
+  font-family: Helvetica;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Content Section */
+#content {
+  width: 50%;
+  margin: auto;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+/* Responsive Design for Portrait */
+@media (orientation: portrait) {
+  #content {
+    width: 100%;
+    font-size: 1.5em;
+  }
+}
+
+/* Navigation Bar */
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  position: sticky;  /* This makes the nav bar stick at the top */
+  top: 0;
+  z-index: 1000;  /* Ensures it stays on top */
+  padding: 10px 0;
+  box-shadow: 0px 4px 2px -2px gray;
+}
+
+.nav-button {
+  margin: 0 20px;
+}
+
+.nav-button a {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;  /* Smooth transition */
+}
+
+.nav-button a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Profile Photo */
+#profile-photo {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 348px;
+  height: auto;
+  border-radius: 10px;  /* Optional: adds a rounded corner to the photo */
+}
+
+/* Contact Section */
+#contact {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-style: italic;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;  /* Rounded corners */
+}
+
+/* Smooth Scroll between Sections */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  body {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #content {
+    width: 90%;
+    font-size: 1.2em;
+  }
+
+  #nav-bar {
+    flex-direction: column;  /* Stacks the nav items vertically */
+    text-align: center;
+  }
+
+  .nav-button {
+    margin: 10px 0;
+  }
+}
